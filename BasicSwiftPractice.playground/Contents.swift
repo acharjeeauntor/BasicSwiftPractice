@@ -286,12 +286,99 @@ import Foundation
  similar if,else , just guard a else ta fisrt a likha thake and if condition tuku rest of the code hisebe use hoy
  */
 
-func evenFunction(number:Int)->Bool{
-    guard number % 2 == 0 else {return false}
-        return true
+//func evenFunction(number:Int)->Bool{
+//    guard number % 2 == 0 else {return false}
+//        return true
+//}
+//
+//print(evenFunction(number: 4))
+
+
+////////////////////////////////////// Enumerations
+/*
+ 
+ An enumeration defines a common type for a group of related values and enables you to work with those values in a type-safe way within your code.
+ 
+ 
+ 
+ */
+
+enum CompassPoint {
+    case north
+    case south
+    case east
+    case west
 }
 
-print(evenFunction(number: 4))
+print("I am in \(CompassPoint.west) point")
+
+var point = CompassPoint.north
+point = .east
+
+print("I am in \(point) point")
 
 
 
+
+enum Planet {
+    case mercury, venus, earth, mars, jupiter, saturn, uranus, neptune
+}
+
+print("I am living in \(Planet.earth)")
+
+var place = Planet.jupiter
+place = .uranus
+
+print("I am living in \(place) now")
+
+
+
+////// Raw Value
+
+enum CompassPoint2:String {
+    case north
+    case south
+    case east
+    case west
+}
+
+print(CompassPoint2.west.rawValue)
+
+enum Planet2:Int {
+    case mercury=1, venus=2, earth=3, mars, jupiter
+}
+
+print(Planet2.venus.rawValue)
+print(Planet2.mars.rawValue)
+
+
+////////////////////////////////////// Switch Statement
+
+
+var x = "30"
+switch x {
+case "20":
+    print("Its 20")
+case "10":
+    print("Its 10")
+default:
+    print("Its Default")
+}
+
+
+var points = CompassPoint2.east
+
+switch points {
+case .east:
+    print("its east")
+    break
+case .north:
+    print("its north")
+    break
+case .west:
+    print("its West")
+    break
+case .south:
+    print("its south")
+    break
+}
