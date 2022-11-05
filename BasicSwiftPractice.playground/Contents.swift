@@ -520,12 +520,104 @@ import Foundation
 /////////////////////// Naming Conventions
 
 /// Snake Case
-var first_name = ""
-func is_valid_number(){}
+//var first_name = ""
+//func is_valid_number(){}
+//
+///// Camel Case
+//var firstName = ""
+//func isValidNumber(){}
 
-/// Camel Case
-var firstName = ""
-func isValidNumber(){}
+
+
+///////////////////////  Libraries & Frameworks
+
+//import Foundation
+//import StoreKit
+//import UIKits
 
 
 
+
+////////////////////////// Type aliases
+/*
+ Type aliases mean amra jodi kono kicur type custom kore dite chy tahole amra
+ oitar jnno type aliases use korte pari
+ */
+
+//typealias Code = String
+//
+//var code:Code = ""
+//
+//func validateCode(code:Code){
+//    print(code)
+//}
+//
+//validateCode(code:"abc")
+//
+//
+//
+//typealias PomoCodeValidationFunction = ((String) -> (Bool))?
+//
+//var validateFunction:PomoCodeValidationFunction
+
+
+/////////////////////////////  Ternary Operator & Return Statement
+/*
+ Ternary Operator just if..else er short version. if ... else condition er jnno amader
+ onk line code likhte hoy but ei code gulo optimize korte hole amra Ternary Operator & Return Statement use korte pari.One line a codition er kaj ses hoye value return kora jay.
+ */
+
+
+//func isEvenFunction(number:Int) -> Bool{
+//    return number % 2 == 0 ? true : false   // ? .... : .....  => This call ternary operator
+//}
+//
+//print(isEvenFunction(number: 7))
+
+
+
+
+
+////////////////////////////////////// Implement a Searching Algo
+
+//let array1:[Int] = [23,65,6,4,6,8,34,23,11,22,33,87,90]
+//
+//func isNumberFound(number:Int,array:[Int]) -> Bool{
+//
+//    for x in array{
+//        if x == number{
+//            return true
+//        }
+//    }
+//    return false
+//}
+//
+//print(isNumberFound(number: 6, array: array1))
+
+
+
+//////////////////////////////////////  Sorting
+
+//var array1:[Int] = [23,65,4,6,8,34,23,11,22,33,87,90]
+//array1.sort()
+//print(array1)
+
+////////////////////////////////////// Implement a Bubble Sort Algo
+
+var array = [7,4,8,9,2,3]
+
+func sortArray(arr:[Int]) -> [Int]{
+    var array  = arr
+    for _ in 0..<array.count - 1{
+    for i in 0..<array.count - 1{
+        if (array[i] > array[i+1]){
+            let temp = array[i]
+            array[i] = array[i+1]
+            array[i+1] = temp
+        }
+    }
+    }
+    return array
+}
+
+print(sortArray(arr: array))
