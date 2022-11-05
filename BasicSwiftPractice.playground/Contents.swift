@@ -303,82 +303,229 @@ import Foundation
  
  */
 
-enum CompassPoint {
-    case north
-    case south
-    case east
-    case west
-}
+//enum CompassPoint {
+//    case north
+//    case south
+//    case east
+//    case west
+//}
+//
+//print("I am in \(CompassPoint.west) point")
+//
+//var point = CompassPoint.north
+//point = .east
+//
+//print("I am in \(point) point")
+//
+//
+//
+//
+//enum Planet {
+//    case mercury, venus, earth, mars, jupiter, saturn, uranus, neptune
+//}
+//
+//print("I am living in \(Planet.earth)")
+//
+//var place = Planet.jupiter
+//place = .uranus
+//
+//print("I am living in \(place) now")
+//
+//
+//
+//////// Raw Value
+//
+//enum CompassPoint2:String {
+//    case north
+//    case south
+//    case east
+//    case west
+//}
+//
+//print(CompassPoint2.west.rawValue)
+//
+//enum Planet2:Int {
+//    case mercury=1, venus=2, earth=3, mars, jupiter
+//}
+//
+//print(Planet2.venus.rawValue)
+//print(Planet2.mars.rawValue)
+//
+//
+//////////////////////////////////////// Switch Statement
+//
+//
+//var x = "30"
+//switch x {
+//case "20":
+//    print("Its 20")
+//case "10":
+//    print("Its 10")
+//default:
+//    print("Its Default")
+//}
+//
+//
+//var points = CompassPoint2.east
+//
+//switch points {
+//case .east:
+//    print("its east")
+//    break
+//case .north:
+//    print("its north")
+//    break
+//case .west:
+//    print("its West")
+//    break
+//case .south:
+//    print("its south")
+//    break
+//}
 
-print("I am in \(CompassPoint.west) point")
+////////////////////////////////////// Protocols
+/*
+ Protocols just like interface in others language. Protocol have declaeration but implementation will done
+ by others class. Just inharite the protocol and do the implemenation accordingy. protocol j swift a data source/Delegate hisebe likha hoy
+ */
 
-var point = CompassPoint.north
-point = .east
-
-print("I am in \(point) point")
-
-
-
-
-enum Planet {
-    case mercury, venus, earth, mars, jupiter, saturn, uranus, neptune
-}
-
-print("I am living in \(Planet.earth)")
-
-var place = Planet.jupiter
-place = .uranus
-
-print("I am living in \(place) now")
-
-
-
-////// Raw Value
-
-enum CompassPoint2:String {
-    case north
-    case south
-    case east
-    case west
-}
-
-print(CompassPoint2.west.rawValue)
-
-enum Planet2:Int {
-    case mercury=1, venus=2, earth=3, mars, jupiter
-}
-
-print(Planet2.venus.rawValue)
-print(Planet2.mars.rawValue)
+//protocol CarDataSource {
+//    var color:String{get set}
+//    func drive()
+//    func isFourWheels()->Bool
+//}
+//
+//class Car{
+//
+//}
+//
+//class BMW:Car, CarDataSource {
+//    var color: String
+//
+//    init(color:String) {
+//        self.color = color
+//    }
+//
+//    func drive() {
+//       print("lets Drive the car")
+//    }
+//
+//    func isFourWheels() -> Bool {
+//        return true
+//    }
+//}
+//
+//var car1 = BMW(color: "Red")
+//print(car1.color)
+//print(car1.isFourWheels())
+//car1.drive()
 
 
-////////////////////////////////////// Switch Statement
+////////////////////////////////////// String
+
+//var firstName = "Auntor"
+//var lastName = "Acharja"
+//print("Full Name is \(firstName) \(lastName)")
+//var fullName = firstName + lastName
+//print(fullName)
+//
+//var variableString = "Horse"
+//variableString += " and carriage"
+//print(variableString)
+//print(variableString.count)
+//
+//for char in variableString{
+//    print(char)
+//}
+//
+//
+//// String values can be constructed by passing an array of Character values as an argument to its initializer:
+//let catCharacters: [Character] = ["C", "a", "t", "!", "🐱"]
+//let catString = String(catCharacters)
+//print(catString)
+//
+//// Multiline String Literals
+//
+//let quotation = """
+//The White Rabbit put on his spectacles.  "Where shall I begin,
+//please your Majesty?" he asked.
+//
+//"Begin at the beginning," the King said gravely, "and go on
+//till you come to the end; then stop."
+//"""
+//
+//print(quotation)
+//
+//
+//let greeting = "Guten Tag!"
+//var firstIndex = greeting[greeting.startIndex]
+//print(firstIndex)
+//
+//var welcome = "hello"
+//welcome.insert("!", at: welcome.endIndex)
+//print(welcome)
 
 
-var x = "30"
-switch x {
-case "20":
-    print("Its 20")
-case "10":
-    print("Its 10")
-default:
-    print("Its Default")
-}
+////////////////////////////////////// Array & Dictionaries
+
+// Array
+
+//var a = [1,2,3,4]
+//print(a)
+//var b:[Int] = [1,2,3,4,5]
+//print(b)
+//
+//var details:[String] = ["Auntor","Acharja"]
+//print(details)
+//
+//var info:[Any] = ["Auntor","Acharja",24,0179,6.00,82.0000,true,false]
+//print(info[4])
+//
+//// Dictionaries
+//var myInfo1 = ["name":"Auntor","Age":"24"]
+//print(myInfo1)
+//
+//var myInfo2:[String:Int] = ["name":3,"Age":7]
+//
+//for myInfo in myInfo2{
+//    print(myInfo)
+//}
+//
+//for (key,value) in myInfo2{
+//    print(key)
+//}
+//
+//for (key,value) in myInfo2{
+//    print(value)
+//}
+
+////////////////////////////////////// Number Type
+
+//var a:Int = 10
+//var b:Float = 2.98
+//var c:Double = 3.000000300033
+//
+////var result  = a + b // This can not be possible,Binary operator '+' cannot be applied to operands of type 'Int' and 'Double'
+//
+//var result2 = a + Int(b)
+//print(result2)
+//
+//var result3 = Double(a) + Double(b) + c
+//print(result3)
+//
+//var result4 = Float(a) + b + Float(c)
+//print(result4)
 
 
-var points = CompassPoint2.east
+/////////////////////// Naming Conventions
 
-switch points {
-case .east:
-    print("its east")
-    break
-case .north:
-    print("its north")
-    break
-case .west:
-    print("its West")
-    break
-case .south:
-    print("its south")
-    break
-}
+/// Snake Case
+var first_name = ""
+func is_valid_number(){}
+
+/// Camel Case
+var firstName = ""
+func isValidNumber(){}
+
+
+
