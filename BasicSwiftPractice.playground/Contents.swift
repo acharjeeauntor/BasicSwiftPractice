@@ -480,6 +480,14 @@ import Foundation
 //
 //var info:[Any] = ["Auntor","Acharja",24,0179,6.00,82.0000,true,false]
 //print(info[4])
+
+//var number = [12,13,56,67,43,23,89]
+//print(number[0])
+//number.count
+//number.last
+//number.append(50)
+//number.insert(40, at: 1)
+
 //
 //// Dictionaries
 //var myInfo1 = ["name":"Auntor","Age":"24"]
@@ -604,20 +612,38 @@ import Foundation
 
 ////////////////////////////////////// Implement a Bubble Sort Algo
 
-var array = [7,4,8,9,2,3]
+//var array = [7,4,8,9,2,3]
+//
+//func sortArray(arr:[Int]) -> [Int]{
+//    var array  = arr
+//    for _ in 0..<array.count - 1{
+//    for i in 0..<array.count - 1{
+//        if (array[i] > array[i+1]){
+//            let temp = array[i]
+//            array[i] = array[i+1]
+//            array[i+1] = temp
+//        }
+//    }
+//    }
+//    return array
+//}
+//
+//print(sortArray(arr: array))
 
-func sortArray(arr:[Int]) -> [Int]{
-    var array  = arr
-    for _ in 0..<array.count - 1{
-    for i in 0..<array.count - 1{
-        if (array[i] > array[i+1]){
-            let temp = array[i]
-            array[i] = array[i+1]
-            array[i+1] = temp
-        }
-    }
-    }
-    return array
-}
 
-print(sortArray(arr: array))
+////////////////////////////////////// Set
+
+/*
+ > Unordered
+ > No Duplicates
+ > Performance
+ */
+
+//var nums = [10,34,56,78,34,10]
+//var numSet = Set(nums)
+//numSet.insert(80)
+//print(numSet)
+//numSet.contains(10)
+
+
+
