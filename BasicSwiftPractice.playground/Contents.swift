@@ -18,7 +18,12 @@ import Foundation
 //print(age)
 //// var age = 27 - Invalid redeclaration of 'age'
 //
-//
+
+//var word = "cafe"
+//print("the number of characters in \(word) is \(word.count)")
+
+
+// let (x1, y1) = (1, 2)
 //let height = 5.5
 //print(type(of: height))
 //
@@ -646,4 +651,14 @@ import Foundation
 //numSet.contains(10)
 
 
+//////////////////////// Semicolons
 
+// var name = "Auntor" print(name) // This can not be possible, through a error
+//var age = 24; print(age)
+
+////////////////// Numeric Literals
+
+//let decimalInteger = 17
+//let binaryInteger = 0b10001       // 17 in binary notation
+//let octalInteger = 0o21           // 17 in octal notation
+//let hexadecimalInteger = 0x11     // 17 in hexadecimal notation
