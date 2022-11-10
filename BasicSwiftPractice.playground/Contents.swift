@@ -225,12 +225,18 @@ import Foundation
 //}
 //
 //
-//let number = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
+// let number = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
 //for num in number{
 //    if num % 2 == 0{
 //        print(num)
 //    }
 //}
+
+//for (index,value) in number.enumerated(){
+//    print("The value of the \(index) is \(value)")
+//}
+
+
 
 
 ////////////////////////// Optionals & Unwrapping
@@ -644,12 +650,36 @@ import Foundation
  > Performance
  */
 
-//var nums = [10,34,56,78,34,10]
+//var nums:Set<Int> = [10,34,56,78,34,10]
 //var numSet = Set(nums)
+//
+//for num in nums{
+//    print(num)
+//}
+//
+//for num in nums.sorted(){
+//    print(num)
+//}
+//
+//
 //numSet.insert(80)
 //print(numSet)
 //numSet.contains(10)
+//numSet.remove(34)
+//print(numSet)
 
+//let oddDigits: Set = [1, 3, 5, 7, 9]
+//let evenDigits: Set = [0, 2, 4, 6, 8]
+//let singleDigitPrimeNumbers: Set = [2, 3, 5, 7]
+//
+//oddDigits.union(evenDigits).sorted()
+//// [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+//oddDigits.intersection(evenDigits).sorted()
+//// []
+//oddDigits.subtracting(singleDigitPrimeNumbers).sorted()
+//// [1, 9]
+//oddDigits.symmetricDifference(singleDigitPrimeNumbers).sorted()
+//// [1, 2, 9]
 
 //////////////////////// Semicolons
 
