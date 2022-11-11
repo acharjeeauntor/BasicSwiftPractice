@@ -133,6 +133,33 @@ import Foundation
 //noReturnFunction(num: 10)
 //noReturnFunction(num: 11)
 
+//func minMax(array: [Int]) -> (min: Int, max: Int) {
+//    var currentMin = array[0]
+//    var currentMax = array[0]
+//    for value in array[1..<array.count] {
+//        if value < currentMin {
+//            currentMin = value
+//        } else if value > currentMax {
+//            currentMax = value
+//        }
+//    }
+//    return (currentMin, currentMax)
+//}
+//let bounds = minMax(array: [8, -6, 2, 109, 3, 71])
+//print("min is \(bounds.min) and max is \(bounds.max)")
+
+
+// Default Parameter Values
+
+//func someFunction(parameterWithoutDefault: Int, parameterWithDefault: Int = 12) {
+//    print("parameterWithDefault is \(parameterWithDefault)")
+//}
+//someFunction(parameterWithoutDefault: 3, parameterWithDefault: 6) // parameterWithDefault is 6
+//someFunction(parameterWithoutDefault: 4)
+
+
+
+ 
 
 
 
@@ -183,6 +210,67 @@ import Foundation
 
 
 
+
+//class Vehicle {
+//   var currentSpeed = 0.0
+//    var description: String {
+//        return "traveling at \(currentSpeed) miles per hour"
+//    }
+//    func makeNoise() {
+//        print(type(of: description))
+//    }
+//    final func seat(){
+//        print("One couple Seat")
+//    }
+// func speed(){
+//        print("Speed")
+//    }
+//}
+//
+//var car = Vehicle()
+//print(car.makeNoise())
+//car.speed()
+//
+//class Bike:Vehicle{
+//    var gear = 5
+//    override func speed(){
+//        print("Speed for Bike")
+//    }
+//
+//    override var description: String{
+//        return super.description + " With gear: \(gear)"
+//    }
+//
+//    // Instance method overrides a 'final' instance method
+////    override func seat(){
+////        print("Speed for Bike")
+////    }
+//
+//
+//}
+//
+//var bike1 = Bike()
+//bike1.speed()
+//print(bike1.description)
+
+
+/*
+ 
+ Preventing Overrides
+ You can prevent a method, property, or subscript from being overridden by marking it as final. Do this by writing the final modifier before the method, property, or subscript’s introducer keyword (such as final var, final func, final class func, and final subscript).
+
+ Any attempt to override a final method, property, or subscript in a subclass is reported as a compile-time error. Methods, properties, or subscripts that you add to a class in an extension can also be marked as final within the extension’s definition.
+
+ You can mark an entire class as final by writing the final modifier before the class keyword in its class definition (final class). Any attempt to subclass a final class is reported as a compile-time error.
+ 
+ 
+ */
+
+
+
+
+
+
 ////////// struct
 
 //struct Car {
@@ -223,6 +311,16 @@ import Foundation
 //    print(x)
 //    x += 1
 //}
+
+//var y = 0
+//repeat {
+//    print(y)
+//    y+=1
+//}while y <= 5
+
+
+
+
 //
 //
 // let number = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
@@ -235,6 +333,95 @@ import Foundation
 //for (index,value) in number.enumerated(){
 //    print("The value of the \(index) is \(value)")
 //}
+
+
+
+// How to print Floyd’s triangle?
+//let n = 4
+//
+//for i in 0..<n{    // we can write for i  in 0...n-1
+//    for _ in 0...i{
+//        print("*")
+//    }
+//    print("\n")
+//}
+
+
+//let searchedchar:Character = "a"
+//
+//switch searchedchar{
+//case "A":
+//    print("The Char is A")
+//case "r","R":
+//    print("The Char is R/r")
+//default:
+//    print("Not a char")
+//}
+
+
+
+
+
+//let num = 8
+//switch num % 2 == 0 {
+//case true :
+//    print("Number is Even")
+//case false :
+//    print("Number is not Even")
+//default :
+//    print("Not a Number")
+//}
+
+//
+//let number = 5
+//
+//switch number{
+//case 0:
+//    print("Number is Zero")
+//case 1..<5:
+//    print("Within 1 to 5 but not 5")
+//case 6...10:
+//    print("Within 6 to 10")
+//default:
+//    print("Non")
+//}
+
+//let somePoint = (1, 1)
+//switch somePoint {
+//case (0, 0):
+//    print("\(somePoint) is at the origin")
+//case (_, 0):
+//    print("\(somePoint) is on the x-axis")
+//case (0, _):
+//    print("\(somePoint) is on the y-axis")
+//case (-2...2, -2...2):
+//    print("\(somePoint) is inside the box")
+//default:
+//    print("\(somePoint) is outside of the box")
+//}
+
+//let someCharacter: Character = "0"
+//switch someCharacter {
+//case "a", "e", "i", "o", "u":
+//    print("\(someCharacter) is a vowel")
+//case "b", "c", "d", "f", "g", "h", "j", "k", "l", "m",
+//     "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z":
+//    print("\(someCharacter) is a consonant")
+//default:
+//    print("\(someCharacter) isn't a vowel or a consonant")
+//}
+
+
+//let integerToDescribe = 5
+//var description = "The number \(integerToDescribe) is"
+//switch integerToDescribe {
+//case 2, 3, 5, 7, 11, 13, 17, 19:
+//    description += " a prime number, and also"
+//    fallthrough
+//default:
+//    description += " an integer."
+//}
+//print(description)
 
 
 
@@ -354,7 +541,7 @@ import Foundation
 //}
 //
 //print(CompassPoint2.west.rawValue)
-//
+////
 //enum Planet2:Int {
 //    case mercury=1, venus=2, earth=3, mars, jupiter
 //}
