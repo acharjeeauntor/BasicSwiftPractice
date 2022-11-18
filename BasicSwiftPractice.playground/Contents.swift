@@ -66,8 +66,8 @@ import Foundation
 //
 //var x = 10
 //var y = 11
-//
-//if x == y{
+////
+//if (x == y){
 //    print("Value of X and Y are same")
 //}else{
 //    print("value of x and y is not same")
@@ -107,10 +107,12 @@ import Foundation
 //}
 //
 //print(myFunction(a: 5, b: 7))
-//myFunction(a: 4, b: 4)
-//
-//
-//
+
+//func noReturnFunction() -> Void{
+//    print("This function will not return any thing")
+//}
+//noReturnFunction()
+
 //func isEven(number:Int)->Bool{
 //    if number%2==0 {
 //        return true
@@ -306,6 +308,9 @@ import Foundation
 
 ////////////////////////// Loops
 
+/* In Swift do...while loop mean repeat...while */
+
+
 //var x = 0
 //while x <= 3 {
 //    print(x)
@@ -318,17 +323,26 @@ import Foundation
 //    y+=1
 //}while y <= 5
 
+//for i in 0...10{
+//    print(i)
+//}
 
+/*If we want to increment after 4 step then we write in other language like this:
+for(i=0;i<15;i+=4)
+*/
+// But in Swift we will write that by this type:
 
+//for i in stride(from: 0, to: 15, by: 4){
+//    print(i)
+//}
 
-//
-//
 // let number = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
 //for num in number{
 //    if num % 2 == 0{
 //        print(num)
 //    }
 //}
+
 
 //for (index,value) in number.enumerated(){
 //    print("The value of the \(index) is \(value)")
@@ -434,6 +448,8 @@ import Foundation
  3. optional value gulo use korte hole must value gulo unwrapping kore nite hbe.
  
  */
+
+
 //var a:Int? = 6
 //var b:Int? = 3
 //var x:Int? = 10
@@ -477,6 +493,42 @@ import Foundation
 //    }
 //}
 //
+
+/*
+ Optional variable use kole must oi variable er jnno amader conditional
+ unwrapping use kore oi optional value k use korte hbe or oi optional variable er
+ jnno nil condition set kore handle korte hbe.
+ 
+ ! mean unwrapped
+ 
+ */
+
+//var age : Int?
+//
+//age = 10
+//
+//// Handle optional variable by simple nil condition
+//if (age != nil){
+//    print("Age is \(age!)")
+//}else{
+//    print("Age is nil")
+//}
+//
+//// Handle optional variable by unwrapping
+//if let unWarppedAge = age {
+//    print("Age is \(unWarppedAge)")
+//}
+//else{
+//    print("Age is nil")
+//}
+
+
+
+
+
+
+
+
 
 
 ////////////////////////////////////// Guard Statements
@@ -621,6 +673,13 @@ import Foundation
 
 ////////////////////////////////////// String
 
+// Empty String Initilization
+
+//var emptyString1 = ""
+//var emptyString2 = String()
+
+//print(emptyString2)
+
 //var firstName = "Auntor"
 //var lastName = "Acharja"
 //print("Full Name is \(firstName) \(lastName)")
@@ -664,6 +723,18 @@ import Foundation
 //print(welcome)
 
 
+
+// String Compare
+//var fName = "Auntor"
+//var nickName = "Ontu"
+//
+//if fName == nickName {
+//    print("same")
+//}else{
+//    print("Not Same")
+//}
+
+
 ////////////////////////////////////// Array & Dictionaries
 
 // Array
@@ -675,35 +746,48 @@ import Foundation
 //
 //var details:[String] = ["Auntor","Acharja"]
 //print(details)
-//
+
+// print(details.index(of:"Aunor"))
+
+//if let x = details.index(of:"Aunor"){
+//    print(x)
+//}
+
 //var info:[Any] = ["Auntor","Acharja",24,0179,6.00,82.0000,true,false]
 //print(info[4])
 
-//var number = [12,13,56,67,43,23,89]
+
+
+
+//var number:Array<Int> = [12,13,56,67,43,23,89]
 //print(number[0])
 //number.count
 //number.last
 //number.append(50)
 //number.insert(40, at: 1)
 
-//
+
 //// Dictionaries
+
+//Dictionary Initilization
+//var dic:Dictionary<String,String> = Dictionary<String,String> ()
+//var dic1:[String:String] = [:]
+
 //var myInfo1 = ["name":"Auntor","Age":"24"]
 //print(myInfo1)
 //
-//var myInfo2:[String:Int] = ["name":3,"Age":7]
+// var myInfo2:[String:Int] = ["name":3,"Age":7]
 //
 //for myInfo in myInfo2{
 //    print(myInfo)
 //}
-//
+
 //for (key,value) in myInfo2{
 //    print(key)
-//}
-//
-//for (key,value) in myInfo2{
 //    print(value)
 //}
+
+
 
 ////////////////////////////////////// Number Type
 
@@ -879,3 +963,16 @@ import Foundation
 //let binaryInteger = 0b10001       // 17 in binary notation
 //let octalInteger = 0o21           // 17 in octal notation
 //let hexadecimalInteger = 0x11     // 17 in hexadecimal notation
+
+
+
+//////////////////////////////////// Error Handiling
+
+//enum VendingMachineError: Error {
+//    case invalidSelection
+//    case insufficientFunds(coinsNeeded: Int)
+//    case outOfStock
+//}
+//
+//throw VendingMachineError.insufficientFunds(coinsNeeded: 5)
+
