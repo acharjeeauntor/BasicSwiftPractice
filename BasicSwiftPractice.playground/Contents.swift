@@ -976,3 +976,111 @@ for(i=0;i<15;i+=4)
 //
 //throw VendingMachineError.insufficientFunds(coinsNeeded: 5)
 
+
+////////////////////////////// class function/Method
+/*
+ 
+ class function kono class er vitore define korte hoy. function k class diye likhte hoy. tahole oi function k call korar jnno r oi class er kono object create korte hoy na direct class er name diye dot dille oi class function er access pawa jay.
+ 
+ */
+
+
+
+// Without class function
+//class Car{
+//    func doSomting(){
+//        print("Print from class")
+//    }
+//}
+//var myCar = Car()
+//myCar.doSomting()
+
+
+
+//// With class function
+//class Car2{
+//    class func doSomting(){
+//        print("Print from class")
+//    }
+//}
+//
+//Car2.doSomting()
+
+
+
+
+
+
+
+
+
+
+
+////////////////////////////// Extensions
+/*
+ Existing Kono class, struct, protocol er moddhe new kono functionality like new Kono function/variable create korte hole amader oi class, protocol, struct k extension diye create korte hoy.
+ */
+
+
+
+// Example-1:
+//class Student{
+//    func SName(){
+//        print("Callling SName function")
+//    }
+//}
+
+
+//extension Student{
+//    func newAddedFunction(){
+//        print("This Function added from extensions")
+//    }
+//}
+//
+//var myObj = Student()
+//myObj.newAddedFunction()
+//myObj.SName()
+
+
+// Example-2:
+// In this example, i am using extension inside built-in String class
+//extension String{
+//
+//    // Computed property
+//    var isPasswordOkay:Bool{
+//        let numberOfChar = self.count
+//        if(numberOfChar > 6 && numberOfChar < 10){
+//            return true
+//        }else{
+//            return false
+//        }
+//    }
+//}
+//
+//var myPass: String = "Auntor Acharja"
+//print("Password Boundary is Okay? \(myPass.isPasswordOkay)")
+
+
+
+
+////////////////////////  Practice
+
+//func loveCalculator(){
+//let loveScore:Int = Int.random(in: 0...100)
+//    print(loveScore)
+//
+//
+//    if loveScore > 80 {
+//        print("You love each other like Kanye loves Kanye")
+//    }else if loveScore > 40 && loveScore < 80 {
+//        print("You go together like Coke and Mentos")
+//    }
+//    else if loveScore < 40 {
+//        print("You will be forever alone")
+//    }
+//
+//
+//
+//}
+//
+//loveCalculator()
