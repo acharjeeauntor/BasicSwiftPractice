@@ -167,11 +167,15 @@ import Foundation
 
 ///////////////////////////// Classes & Structs
 
+
+// Classe,Struct,enum er name always diffrent hote hbe, kokhno same howa jabe na.
+
 /*
  There are little bit difference between Classes & Structs.
  
  Class is - Reference Type
  Structs is - Value Type
+ For inheritence we must need to use Class because we can not inherit superClass in Struct
  
  Please see this link for more info: https://medium.com/@burakakyalcin/class-vs-struct-in-swift-f8c48eaacdba
  
@@ -1101,8 +1105,56 @@ for(i=0;i<15;i+=4)
 
 // Clouser
 
-var addTwoNumber:(Int,Int) -> Int = {
-    (num1,num2) in return num1 + num2
-}
+//var addTwoNumber:(Int,Int) -> Int = {
+//    (num1,num2) in return num1 + num2
+//}
+//
+//print(addTwoNumber(12,50))
 
-print(addTwoNumber(12,50))
+
+
+
+//////////////////////  Getter/Setter/ Compound Properties
+
+
+//let pizzaInInches:Int = 10
+// Compound Properties
+//var numberOfSlice: Int {
+//    get{
+//        return pizzaInInches - 5
+//    }
+//    set{
+//        print("This one Set")
+//    }
+//}
+//
+//print(numberOfSlice)
+//numberOfSlice = 56
+
+//
+//let pizzaInInches:Int = 10
+//// Compound Properties
+//var numberOfSlice: Int { return pizzaInInches - 5 }
+//print(numberOfSlice)
+// numberOfSlice = 56            // Cannot assign to value: 'numberOfSlice' is a get-only property
+
+
+
+//////////////////// Touples
+
+/*
+ Touples one kind of Data Structure
+ 
+ */
+
+let touple1 = ("Auntor",24)
+print(touple1.0)
+
+let touple2 = (name:"Auntor",university:"DIU")
+print(touple2.university)
+
+let touple3:(nickName:String,number:Int)
+touple3.nickName = "ONTU"
+print(touple3.nickName)
+
+
