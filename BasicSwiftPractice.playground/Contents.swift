@@ -1084,3 +1084,25 @@ for(i=0;i<15;i+=4)
 //}
 //
 //loveCalculator()
+
+
+
+/////////////////////////////// Clousers
+
+
+// Normal Function
+
+//func addTwoNumber(num1:Int,num2:Int) -> Int {
+//    return num1 + num2
+//}
+//
+//print(addTwoNumber(num1:10,num2:30))
+
+
+// Clouser
+
+var addTwoNumber:(Int,Int) -> Int = {
+    (num1,num2) in return num1 + num2
+}
+
+print(addTwoNumber(12,50))
