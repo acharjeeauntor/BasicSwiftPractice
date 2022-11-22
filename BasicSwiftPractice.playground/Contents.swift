@@ -18,12 +18,12 @@ import Foundation
 //print(age)
 //// var age = 27 - Invalid redeclaration of 'age'
 //
-
+//
 //var word = "cafe"
 //print("the number of characters in \(word) is \(word.count)")
-
-
-// let (x1, y1) = (1, 2)
+//
+//
+//let (x1, y1) = (1, 2)
 //let height = 5.5
 //print(type(of: height))
 //
@@ -50,6 +50,14 @@ import Foundation
 //
 //var auntor:Person = Person()
 //print(type(of: auntor))
+//
+//let pizzaInInches = 20
+//
+//// Compound Properties
+//var numberOfSlice: Int {
+//        return pizzaInInches - 5
+//}
+//print(numberOfSlice)
 
 
 ///////////////////////////// Condition
@@ -1147,14 +1155,14 @@ for(i=0;i<15;i+=4)
  
  */
 
-let touple1 = ("Auntor",24)
-print(touple1.0)
-
-let touple2 = (name:"Auntor",university:"DIU")
-print(touple2.university)
-
-let touple3:(nickName:String,number:Int)
-touple3.nickName = "ONTU"
-print(touple3.nickName)
+//let touple1 = ("Auntor",24)
+//print(touple1.0)
+//
+//let touple2 = (name:"Auntor",university:"DIU")
+//print(touple2.university)
+//
+//let touple3:(nickName:String,number:Int)
+//touple3.nickName = "ONTU"
+//print(touple3.nickName)
 
 
