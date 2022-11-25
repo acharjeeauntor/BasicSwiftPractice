@@ -115,12 +115,12 @@ import Foundation
 //}
 //
 //print(myFunction(a: 5, b: 7))
-
+//
 //func noReturnFunction() -> Void{
 //    print("This function will not return any thing")
 //}
 //noReturnFunction()
-
+//
 //func isEven(number:Int)->Bool{
 //    if number%2==0 {
 //        return true
@@ -142,7 +142,7 @@ import Foundation
 //
 //noReturnFunction(num: 10)
 //noReturnFunction(num: 11)
-
+//
 //func minMax(array: [Int]) -> (min: Int, max: Int) {
 //    var currentMin = array[0]
 //    var currentMax = array[0]
@@ -157,10 +157,10 @@ import Foundation
 //}
 //let bounds = minMax(array: [8, -6, 2, 109, 3, 71])
 //print("min is \(bounds.min) and max is \(bounds.max)")
-
-
-// Default Parameter Values
-
+//
+//
+// // Default Parameter Values
+//
 //func someFunction(parameterWithoutDefault: Int, parameterWithDefault: Int = 12) {
 //    print("parameterWithDefault is \(parameterWithDefault)")
 //}
@@ -328,13 +328,13 @@ import Foundation
 //    print(x)
 //    x += 1
 //}
-
+//
 //var y = 0
 //repeat {
 //    print(y)
 //    y+=1
 //}while y <= 5
-
+//
 //for i in 0...10{
 //    print(i)
 //}
@@ -784,16 +784,16 @@ for(i=0;i<15;i+=4)
 //Dictionary Initilization
 //var dic:Dictionary<String,String> = Dictionary<String,String> ()
 //var dic1:[String:String] = [:]
-
+//
 //var myInfo1 = ["name":"Auntor","Age":"24"]
 //print(myInfo1)
 //
-// var myInfo2:[String:Int] = ["name":3,"Age":7]
+//var myInfo2:[String:Int] = ["name":3,"Age":7]
 //
 //for myInfo in myInfo2{
 //    print(myInfo)
 //}
-
+//
 //for (key,value) in myInfo2{
 //    print(key)
 //    print(value)
@@ -940,6 +940,7 @@ for(i=0;i<15;i+=4)
 //    print(num)
 //}
 //
+//print("Second Set")
 //for num in nums.sorted(){
 //    print(num)
 //}
@@ -950,7 +951,7 @@ for(i=0;i<15;i+=4)
 //numSet.contains(10)
 //numSet.remove(34)
 //print(numSet)
-
+//
 //let oddDigits: Set = [1, 3, 5, 7, 9]
 //let evenDigits: Set = [0, 2, 4, 6, 8]
 //let singleDigitPrimeNumbers: Set = [2, 3, 5, 7]
@@ -962,7 +963,7 @@ for(i=0;i<15;i+=4)
 //oddDigits.subtracting(singleDigitPrimeNumbers).sorted()
 //// [1, 9]
 //oddDigits.symmetricDifference(singleDigitPrimeNumbers).sorted()
-//// [1, 2, 9]
+// [1, 2, 9]
 
 //////////////////////// Semicolons
 
@@ -1100,6 +1101,11 @@ for(i=0;i<15;i+=4)
 
 
 /////////////////////////////// Clousers
+/*
+ 
+ Clousers mean jodi emon kono akta case ase j akta function/kicu script er output er upor depend kore next kono kaj hobe tokhn amra oi script tuku ei clousers er moddhe diye thn output pawa porjonto wait kore-output peye thn baki kaj suru korte pari.jemon API call, akta API call howar por oi API call er status/output er upor next kaj depend kortece so amra oi API calling ta clousers er moddhe dite pari thn output asle oi output ta code e use korte parbo.
+ 
+ */
 
 
 // Normal Function
@@ -1109,10 +1115,10 @@ for(i=0;i<15;i+=4)
 //}
 //
 //print(addTwoNumber(num1:10,num2:30))
-
-
-// Clouser
-
+//
+//
+// // Clouser
+//
 //var addTwoNumber:(Int,Int) -> Int = {
 //    (num1,num2) in return num1 + num2
 //}
@@ -1141,10 +1147,28 @@ for(i=0;i<15;i+=4)
 
 //
 //let pizzaInInches:Int = 10
-//// Compound Properties
+//// Compound Properties - Read-Only Properties
 //var numberOfSlice: Int { return pizzaInInches - 5 }
 //print(numberOfSlice)
 // numberOfSlice = 56            // Cannot assign to value: 'numberOfSlice' is a get-only property
+
+//class ABC{
+//    private var x = 10
+//    static var y = 20
+//
+//    static func call(){
+//        print("Call the Class Function")
+//    }
+//
+//    func call2(){
+//        print("Call 2")
+//    }
+//
+//}
+//
+//var obj1 = ABC()
+//// print(obj1.x)    // 'x' is inaccessible due to 'private' protection level
+//obj1.call2()
 
 
 
@@ -1164,5 +1188,144 @@ for(i=0;i<15;i+=4)
 //let touple3:(nickName:String,number:Int)
 //touple3.nickName = "ONTU"
 //print(touple3.nickName)
+
+
+
+
+
+
+/////////////////////////////// Generic Functions  [mane oi function er kono type define thakbe na]
+
+/* Function er parameter jodi reference type deya hoy tahole parameter er age inout use korte hoy and function call er variable er agee $ sign dite hoy. */
+//
+//func swapTwoStrings(a: inout String,b: inout String) {
+//    let temporaryA = a
+//    a = b
+//    b = temporaryA
+//}
+//
+//var x = "10"
+//var y = "20"
+//
+//print("Before Swap x = \(x) and y = \(y)")
+//swapTwoStrings(a:&x,b:&y)
+//print("After Swap x = \(x) and y = \(y)")
+
+
+
+/* For generic function, the method can be used with any data type. when we design a generic, the data types of the method parameters or class isn’t known.
+ <T> diye amra bujhte parbo eta generic type.
+ 
+ */
+
+
+//func swapTwoStrings<T>(a: inout T,b: inout T) {
+//    let temporaryA = a
+//    a = b
+//    b = temporaryA
+//}
+//
+//var x = "10"
+//var y = "20"
+//
+//print("Before Swap x = \(x) and y = \(y)")
+//swapTwoStrings(a:&x,b:&y)
+//print("After Swap x = \(x) and y = \(y)")
+
+
+///////////////////////////  Subscripts
+
+/* You use subscripts to set and retrieve values by index without needing separate methods for setting and retrieval. For example, you access elements in an Array instance as someArray[index] and elements in a Dictionary instance as someDictionary[key]
+ */
+
+
+//typealias Birds = Array<String>
+//typealias DateOfBirth = Dictionary<String,Int>
+//
+//var bird:Birds = ["ABC","DEF","ksoj"]
+//var player:DateOfBirth = [
+//    "Player1":1998,
+//    "Player2":6752,
+//    "Player3":6278
+//]
+//
+//print(bird[0])
+//print(player["Player3"]!)
+//
+//bird[1] = "Auntor"
+//player["Player4"] = 1234
+//
+//print(bird)
+//print(player)
+
+//////////////// Access Control
+/* [Mean Controling the access of any properties or functions]
+There are five types of Access control in swift.
+ Open access is the highest (least restrictive) access level and private access is the lowest (most restrictive) access level.
+private : Visible and accessible inside the class only but if use extension than the private variable/func can be access from the extension also
+fileprivate : Visible and accessible inside the file only
+internal : internal mean by default jeta thake. Or amra kono access control use na korle ja hoy, ei jnno internal keyword codebase a na likhleu hoy.Visible and accessible from any places inside the full module
+open: Visible and accessible from any module and any place. Example: UITableViewCell one kind of open class jeta amra j kono module or j kono project a access korte pari just amader UIKit package ta import kore nite hoy.
+public: Visible and accessible from any module and any place.
+ 
+ */
+
+//open class MySelf{
+//var y = 50   // This one acts as a internal / default
+//private var x = 10
+//public var a = 10
+//private func myFunc(){
+//    print("My Name is Auntor")
+//}
+//fileprivate func myAgeFunc(){
+//        print("My Age is 24")
+//    }
+//}
+//
+//var x = MySelf()
+//// x.myFunc()  // 'myFunc' is inaccessible due to 'private' protection level
+//x.myAgeFunc()
+//print(x.a)
+
+
+/////////////////////////////// Error handling
+
+enum BikeError:Error{
+    case insuffientPetrolQuantity(needed:Int)
+    case insuffientAge
+}
+
+struct Bike {
+    func startPicnic(petrolQuantity:Int) throws -> String{
+        if petrolQuantity < 5 {
+            throw BikeError.insuffientPetrolQuantity(needed: 5)
+        }else{
+            return "Lets Go to the Picnic"
+        }
+    }
+    
+    func ride(age:Int) throws -> String{
+        if age <= 18 {
+            throw BikeError.insuffientAge
+        }else{
+            return "You can now Ride"
+        }
+}
+}
+
+var obj = Bike()
+
+do{
+    try obj.startPicnic(petrolQuantity: 4)
+    try obj.ride(age: 15)
+}catch BikeError.insuffientPetrolQuantity(let needed){
+    debugPrint("Error Occure because of Insuffient Petrol Quantity, the needed quantity is \(needed)")
+}catch BikeError.insuffientAge {
+    debugPrint("Error Occure because of Insuffient age")
+}
+
+
+
+
 
 
