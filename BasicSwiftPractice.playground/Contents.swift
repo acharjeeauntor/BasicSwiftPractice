@@ -590,6 +590,8 @@ for(i=0;i<15;i+=4)
 //
 //if let partsPrice = objComputerParts.findParts(name: "CPU")?.price{
 //    print("Price is \(partsPrice)")
+//}else{
+//print("No Parts Found")
 //}
 
 
@@ -1374,6 +1376,31 @@ public: Visible and accessible from any module and any place.
 //}
 
 
+
+// Problem Solving: Check a number is prime number or not
+
+let number:Int = 1001
+var count:Int = 0
+
+if number > 1 {
+
+for i in 2..<number{
+    if number % i == 0 {
+        count+=1
+        break
+    }
+}
+
+
+if count == 0{
+    print("\(number) is a prime number")
+}else{
+    print("\(number) is not a prime number")
+}
+    
+}else{
+    print("Your given number need to more then 1")
+}
 
 
 
