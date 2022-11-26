@@ -487,17 +487,17 @@ for(i=0;i<15;i+=4)
 //*/
 //
 //
-////var j:String? = "aauntor"
+//var j:String? = "aauntor"
 //var j:String? = nil
 //if let v = j {
 //    print("UNwrapping Done")
 //}
-//
-//// Jokhn j = nil hbe tokhn {} er vitorer gulo execute hbe na
-////Jokhn j = value/"" hbe tokhn {} er vitorer gulo execute hbe
-//
-//
-//
+
+// Jokhn j = nil hbe tokhn {} er vitorer gulo execute hbe na
+//Jokhn j = value/"" hbe tokhn {} er vitorer gulo execute hbe
+
+
+
 //if let value = b {
 //    if let value2 = a {
 //        let res1 = value + value2
@@ -511,7 +511,7 @@ for(i=0;i<15;i+=4)
  unwrapping use kore oi optional value k use korte hbe or oi optional variable er
  jnno nil condition set kore handle korte hbe.
  
- ! mean unwrapped
+ ! mean force unwrapped , not recommanded
  
  */
 
@@ -535,8 +535,62 @@ for(i=0;i<15;i+=4)
 //}
 
 
+// Optional Binding
+
+//struct Parts{
+//    let name : String?
+//    let price : String?
+//}
+//
+//class ComputerParts{
+//    func findParts(name:String) -> Parts?{
+//        if name == "CPU"{
+//            return Parts(name:"CPU",price: "100")
+//        }else if name == "Keyboard"{
+//            return Parts(name: "Keyboard", price:"200")
+//        }
+//        return nil
+//    }
+//}
+//
+//var objComputerParts = ComputerParts()
+//
+//if let parts = objComputerParts.findParts(name: "CPU"){
+//    if let partsPrice = parts.price{
+//        print("Price is \(partsPrice)")
+//    }else{
+//        print("No Price")
+//    }
+//}else{
+//    print("nil")
+//}
 
 
+
+
+// Optional Chaining
+
+//struct Parts{
+//    let name : String?
+//    let price : String?
+//}
+//
+//class ComputerParts{
+//    func findParts(name:String) -> Parts?{
+//        if name == "CPU"{
+//            return Parts(name:"CPU",price: "100")
+//        }else if name == "Keyboard"{
+//            return Parts(name: "Keyboard", price:"200")
+//        }
+//        return nil
+//    }
+//}
+//
+//var objComputerParts = ComputerParts()
+//
+//if let partsPrice = objComputerParts.findParts(name: "CPU")?.price{
+//    print("Price is \(partsPrice)")
+//}
 
 
 
@@ -644,6 +698,7 @@ for(i=0;i<15;i+=4)
 //    print("its south")
 //    break
 //}
+
 
 ////////////////////////////////////// Protocols
 /*
@@ -904,6 +959,7 @@ for(i=0;i<15;i+=4)
 //array1.sort()
 //print(array1)
 
+
 ////////////////////////////////////// Implement a Bubble Sort Algo
 
 //var array = [7,4,8,9,2,3]
@@ -965,10 +1021,12 @@ for(i=0;i<15;i+=4)
 //oddDigits.symmetricDifference(singleDigitPrimeNumbers).sorted()
 // [1, 2, 9]
 
+
 //////////////////////// Semicolons
 
 // var name = "Auntor" print(name) // This can not be possible, through a error
 //var age = 24; print(age)
+
 
 ////////////////// Numeric Literals
 
@@ -977,17 +1035,6 @@ for(i=0;i<15;i+=4)
 //let octalInteger = 0o21           // 17 in octal notation
 //let hexadecimalInteger = 0x11     // 17 in hexadecimal notation
 
-
-
-//////////////////////////////////// Error Handiling
-
-//enum VendingMachineError: Error {
-//    case invalidSelection
-//    case insufficientFunds(coinsNeeded: Int)
-//    case outOfStock
-//}
-//
-//throw VendingMachineError.insufficientFunds(coinsNeeded: 5)
 
 
 ////////////////////////////// class function/Method
@@ -1177,6 +1224,8 @@ for(i=0;i<15;i+=4)
 /*
  Touples one kind of Data Structure
  
+ In Swift, a tuple is a group of different values. And, each value inside a tuple can be of different data types.
+ 
  */
 
 //let touple1 = ("Auntor",24)
@@ -1290,39 +1339,39 @@ public: Visible and accessible from any module and any place.
 
 /////////////////////////////// Error handling
 
-enum BikeError:Error{
-    case insuffientPetrolQuantity(needed:Int)
-    case insuffientAge
-}
-
-struct Bike {
-    func startPicnic(petrolQuantity:Int) throws -> String{
-        if petrolQuantity < 5 {
-            throw BikeError.insuffientPetrolQuantity(needed: 5)
-        }else{
-            return "Lets Go to the Picnic"
-        }
-    }
-    
-    func ride(age:Int) throws -> String{
-        if age <= 18 {
-            throw BikeError.insuffientAge
-        }else{
-            return "You can now Ride"
-        }
-}
-}
-
-var obj = Bike()
-
-do{
-    try obj.startPicnic(petrolQuantity: 4)
-    try obj.ride(age: 15)
-}catch BikeError.insuffientPetrolQuantity(let needed){
-    debugPrint("Error Occure because of Insuffient Petrol Quantity, the needed quantity is \(needed)")
-}catch BikeError.insuffientAge {
-    debugPrint("Error Occure because of Insuffient age")
-}
+//enum BikeError:Error{
+//    case insuffientPetrolQuantity(needed:Int)
+//    case insuffientAge
+//}
+//
+//struct Bike {
+//    func startPicnic(petrolQuantity:Int) throws -> String{
+//        if petrolQuantity < 5 {
+//            throw BikeError.insuffientPetrolQuantity(needed: 5)
+//        }else{
+//            return "Lets Go to the Picnic"
+//        }
+//    }
+//
+//    func ride(age:Int) throws -> String{
+//        if age <= 18 {
+//            throw BikeError.insuffientAge
+//        }else{
+//            return "You can now Ride"
+//        }
+//}
+//}
+//
+//var obj = Bike()
+//
+//do{
+//    try obj.startPicnic(petrolQuantity: 4)
+//    try obj.ride(age: 15)
+//}catch BikeError.insuffientPetrolQuantity(let needed){
+//    debugPrint("Error Occure because of Insuffient Petrol Quantity, the needed quantity is \(needed)")
+//}catch BikeError.insuffientAge {
+//    debugPrint("Error Occure because of Insuffient age")
+//}
 
 
 
